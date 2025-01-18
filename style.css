@@ -1,0 +1,248 @@
+/* Reset Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+
+}
+
+/* Default Body Styles */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 450px;
+    width: 500px;
+    background-color: #96c11e66;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index: 9;
+}
+
+
+#nav{
+    height: 190px;
+    width: 1000%;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 130px;
+    gap: 40px;
+    position: fixed;
+    z-index: 99;  
+}
+
+#nav img{
+    height: 70px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+
+#page1{
+
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    
+    
+}
+
+#page1 h1{
+    font-size: 150px;
+    font-weight: 900;
+    margin-top: 30px;
+    
+position: relative;
+text-align: center;
+line-height: 140px;
+}
+
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color:black;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+
+    top:-6px;
+    left:-8px;
+    text-align: center;
+
+}
+
+
+
+#page1 h2{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#page1 p{
+    font-size: 17px;
+    text-align: center;
+    width: 40%;
+}
+
+#page2{
+   min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+
+}
+
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x:auto ;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 130px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px white;
+    margin-right: 10px;
+    color: transparent;
+    transition: all linear 0.5s;
+    color: black;
+
+    /* border: 2px solid white; */
+
+}
+#scroller h4:hover{
+    color: #95C11E;
+}
+
+
+@keyframes scroll {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    height:40vh;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 90px;
+    margin-top: 7%;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-us-in{
+    width: 45%;
+    text-align: center;
+}
+
+#about-us-in h3{
+    font-size: 45px;
+    font-weight: 900;
+    /* margin-bottom: 20px; */
+    position: relative;
+    bottom: 60px;
+}
+
+
+#about-us-in p{
+    font-weight: 400;
+    line-height: 30px;
+    /* letter-spacing: .5px; */
+    /* word-spacing:1px; */
+}
+
+#cards-con{
+    background-color: rebeccapurple;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    height: 80%;
+    width: 22%;
+    background-color: black;
+    border-radius: 20px;
+}
+
+#card1{
+    background-image: url(i-1.png);
+    object-fit: cover;
+}
+
+#card2{
+    background-image: url(/i-2.png);
+}
+
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
